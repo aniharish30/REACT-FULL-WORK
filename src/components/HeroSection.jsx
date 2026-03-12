@@ -1,9 +1,17 @@
+ import { useNavigate } from "react-router-dom";
 const HeroSection = () => {
+
+
+  const navigate = useNavigate();
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
         <a
           href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate("/hookform");
+          }}
           className="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
           role="alert"
         >
@@ -35,7 +43,7 @@ const HeroSection = () => {
         </p>
         <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <a
-            href="#"
+            onClick={() => navigate("/hookform")}
             className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
           >
             Learn more

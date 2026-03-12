@@ -8,6 +8,8 @@ import Contact from "../pages/Contact/Contact";
 import ImagePage from "../pages/ImagePage";
 import { lazy, Suspense } from "react";
 import Expensive from "../pages/Expensive";
+import ReactNormalForm from "../pages/Contact/ReactNormalForm";
+import ReactHookForm from "../pages/Contact/ReactHookForm";
 
 const ProductDetails = lazy(() => import("../pages/ProductDetail"));
 
@@ -44,6 +46,10 @@ const Route = createBrowserRouter([
         path: "/expensive",
         element: <Expensive />,
       },
+      {
+        path: "hookform",
+        element: <ReactHookForm />,
+      }
     ],
     errorElement: <ErrorPage />,
   },
